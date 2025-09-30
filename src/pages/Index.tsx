@@ -27,10 +27,16 @@ import { Navigation } from "@/components/Navigation";
  * - Vercel: Import from GitHub
  */
 const Index = () => {
+  const [countdownComplete, setCountdownComplete] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [showGift, setShowGift] = useState(false);
 
-  // Show login gate first
+  // Show countdown first
+  if (!countdownComplete) {
+    return <Hero onCountdownComplete={() => setCountdownComplete(true)} />;
+  }
+
+  // Show login gate after countdown
   if (!isUnlocked) {
     return <LoginGate onUnlock={() => setIsUnlocked(true)} />;
   }
@@ -43,7 +49,7 @@ const Index = () => {
       {/* Add padding to account for fixed header */}
       <div className="pt-16">
         <div id="home">
-          <Hero />
+          <Hero onCountdownComplete={() => {}} />
         </div>
         
         <Timeline />

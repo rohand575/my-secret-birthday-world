@@ -4,6 +4,7 @@ import { toast } from "sonner";
 
 interface CountdownProps {
   targetDate: string;
+  onComplete?: () => void;
 }
 
 interface TimeLeft {
@@ -19,7 +20,7 @@ interface TimeLeft {
  * Counts down to the target birthday date/time.
  * When it reaches zero, launches fireworks! 🎆
  */
-export const Countdown = ({ targetDate }: CountdownProps) => {
+export const Countdown = ({ targetDate, onComplete }: CountdownProps) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [showFireworks, setShowFireworks] = useState(false);
   const [hasTriggeredBirthday, setHasTriggeredBirthday] = useState(false);
@@ -56,6 +57,11 @@ export const Countdown = ({ targetDate }: CountdownProps) => {
           description: "It's finally here! Make a wish! 🌟",
           duration: 10000,
         });
+        
+        // Trigger the next screen after fireworks display
+        setTimeout(() => {
+          onComplete?.();
+        }, 5000);
       }
     }, 1000);
 

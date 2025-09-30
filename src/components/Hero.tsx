@@ -1,12 +1,16 @@
 import { config } from "@/data/config";
 import { Countdown } from "./Countdown";
 
+interface HeroProps {
+  onCountdownComplete?: () => void;
+}
+
 /**
  * Hero Section Component
  * 
  * Displays birthday greeting with live countdown timer
  */
-export const Hero = () => {
+export const Hero = ({ onCountdownComplete }: HeroProps) => {
   return (
     <section className="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
       {/* Decorative background elements */}
@@ -28,7 +32,7 @@ export const Hero = () => {
 
         {/* Countdown timer */}
         <div className="glass-card p-8 rounded-3xl shadow-glow max-w-2xl mx-auto">
-          <Countdown targetDate={config.birthdayDate} />
+          <Countdown targetDate={config.birthdayDate} onComplete={onCountdownComplete} />
         </div>
 
         {/* Decorative hearts */}
