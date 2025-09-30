@@ -1,0 +1,98 @@
+[
+  {
+    "id": "q1",
+    "question": "What was the first movie we watched together?",
+    "options": [
+      "The Notebook",
+      "La La Land",
+      "Your favorite rom-com",
+      "That action movie"
+    ],
+    "correctAnswer": 2,
+    "emoji": "🎬"
+  },
+  {
+    "id": "q2",
+    "question": "What's my go-to coffee order?",
+    "options": [
+      "Black coffee",
+      "Caramel latte with extra foam",
+      "Cappuccino",
+      "Iced americano"
+    ],
+    "correctAnswer": 1,
+    "emoji": "☕"
+  },
+  {
+    "id": "q3",
+    "question": "What song do I always sing in the shower?",
+    "options": [
+      "Perfect by Ed Sheeran",
+      "That 80s song",
+      "Our song",
+      "Some random tune"
+    ],
+    "correctAnswer": 2,
+    "emoji": "🎵"
+  },
+  {
+    "id": "q4",
+    "question": "What's my biggest fear?",
+    "options": [
+      "Heights",
+      "Spiders",
+      "Losing you",
+      "Public speaking"
+    ],
+    "correctAnswer": 2,
+    "emoji": "😰"
+  },
+  {
+    "id": "q5",
+    "question": "What's our favorite place to visit together?",
+    "options": [
+      "The beach at sunset",
+      "That cozy bookstore",
+      "The park where we had our first date",
+      "Your favorite restaurant"
+    ],
+    "correctAnswer": 2,
+    "emoji": "📍"
+  },
+  {
+    "id": "q6",
+    "question": "What did I get you for our first anniversary?",
+    "options": [
+      "Jewelry",
+      "A handwritten book of our memories",
+      "Flowers",
+      "Concert tickets"
+    ],
+    "correctAnswer": 1,
+    "emoji": "🎁"
+  },
+  {
+    "id": "q7",
+    "question": "What do I love most about you?",
+    "options": [
+      "Your smile",
+      "Your kindness",
+      "Everything – I can't choose just one thing!",
+      "Your sense of humor"
+    ],
+    "correctAnswer": 2,
+    "emoji": "💕"
+  },
+  {
+    "id": "q8",
+    "question": "What's my nickname for you?",
+    "options": [
+      "My love",
+      "Sunshine",
+      "That special name only I use",
+      "Beautiful"
+    ],
+    "correctAnswer": 2,
+    "emoji": "😊"
+  }
+]
