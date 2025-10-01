@@ -70,16 +70,14 @@ export const Countdown = ({ targetDate, onComplete }: CountdownProps) => {
 
   if (!timeLeft) {
     return (
-      <div className="relative">
-        <div className="text-center py-8">
+      <div className="relative rounded-3xl overflow-hidden">
+        <div className="text-center py-8 relative z-10">
           <h3 className="text-4xl md:text-5xl font-bold text-shimmer mb-4">
             It's Your Special Day! 🎂
           </h3>
-          <p className="text-lg text-muted-foreground">
-            May all your wishes come true! ✨
-          </p>
+          <p className="text-lg text-muted-foreground">May all your wishes come true! ✨</p>
         </div>
-        {showFireworks && <Fireworks />}
+        {showFireworks && <Fireworks />} {/* now sits behind because of -z-10 */}
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LoginGate } from "@/components/LoginGate";
 import { Hero } from "@/components/Hero";
 import { Timeline } from "@/components/Timeline";
@@ -7,63 +7,74 @@ import { Quiz } from "@/components/Quiz";
 import { GiftReveal } from "@/components/GiftReveal";
 import { CardWall } from "@/components/CardWall";
 import { Navigation } from "@/components/Navigation";
+// import { Countdown } from "@/components/Countdown"; // not needed directly here
 
 /**
- * Birthday World - Main Page
- * 
- * A romantic single-page website for a special birthday celebration.
- * 
- * 🎨 To customize this website:
- * 1. Edit src/data/config.ts - Update name, birthday date, and passphrase
- * 2. Edit src/data/moments.json - Add your timeline memories
- * 3. Edit src/data/notes.json - Add your love notes
- * 4. Edit src/data/quiz.json - Customize quiz questions
- * 5. Add photos to src/assets/photos/
- * 6. (Optional) Add audio notes to src/assets/audio/
- * 
- * 🚀 To deploy:
- * - GitHub Pages: Connect your repo and deploy
- * - Netlify: Drag and drop your build folder
- * - Vercel: Import from GitHub
+ * Flow:
+ * 1) Countdown (Hero) ➜ 2) LoginGate ➜ 3) Main site
  */
 const Index = () => {
   const [countdownComplete, setCountdownComplete] = useState(false);
   const [isUnlocked, setIsUnlocked] = useState(false);
   const [showGift, setShowGift] = useState(false);
 
-  // Show countdown first
+  // Lock scroll while gated (countdown or login)
+  useEffect(() => {
+    const gated = !countdownComplete || !isUnlocked;
+    document.documentElement.classList.toggle("overflow-hidden", gated);
+    document.body.classList.toggle("overflow-hidden", gated);
+    return () => {
+      document.documentElement.classList.remove("overflow-hidden");
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [countdownComplete, isUnlocked]);
+
+  // 1) COUNTDOWN PAGE ONLY
   if (!countdownComplete) {
-    return <Hero onCountdownComplete={() => setCountdownComplete(true)} />;
+    return (
+      <div className="min-h-screen">
+      <Hero
+        onCountdownComplete={() => setCountdownComplete(true)}
+        showHeader={false}     // Hides “Happy Birthday, Maaike”
+      />
+    </div>
+    );
   }
 
-  // Show login gate after countdown
+  // 2) LOGIN GATE ONLY (after countdown)
   if (!isUnlocked) {
-    return <LoginGate onUnlock={() => setIsUnlocked(true)} />;
+    return (
+      <div className="min-h-screen">
+        <LoginGate onUnlock={() => setIsUnlocked(true)} />
+      </div>
+    );
   }
 
-  // Main birthday world experience
+  // 3) MAIN EXPERIENCE (now everything is accessible)
   return (
     <div className="min-h-screen">
       <Navigation />
-      
-      {/* Add padding to account for fixed header */}
-      <div className="pt-16">
-        <div id="home">
+
+      {/* offset for fixed header */}
+      <main className="pt-16">
+        {/* Optional: if your Hero also contains the countdown, it’s done now.
+            It will just render the "special day" banner. If you prefer a 
+            lighter banner without countdown, swap this with a simple Banner component. */}
+        <section id="home">
           <Hero onCountdownComplete={() => {}} />
-        </div>
-        
+        </section>
+
         <Timeline />
-        
         <Gallery />
-        
+
         {!showGift ? (
           <Quiz onUnlockGift={() => setShowGift(true)} />
         ) : (
           <GiftReveal />
         )}
-        
+
         <CardWall />
-      </div>
+      </main>
     </div>
   );
 };

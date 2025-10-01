@@ -6,6 +6,16 @@
 All colors MUST be HSL.
 */
 
+.fireworks-canvas {
+  opacity: 0.35;            /* tasteful glow */
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fireworks-canvas { display: none; }
+}
+
+
 @layer base {
   :root {
     /* Romantic color palette - Birthday World theme */

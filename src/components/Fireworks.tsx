@@ -32,62 +32,109 @@ export const Fireworks = () => {
       constructor(x: number, y: number, color: string) {
         this.x = x;
         this.y = y;
-        this.vx = (Math.random() - 0.5) * 8;
-        this.vy = (Math.random() - 0.5) * 8;
-        this.life = 100;
+        this.vx = (Math.random() - 0.5) * 4;
+        this.vy = (Math.random() - 0.5) * 4;
+        this.life = 80;
         this.color = color;
       }
 
       update() {
         this.x += this.vx;
         this.y += this.vy;
-        this.vy += 0.1; // gravity
+        this.vy += 0.04; // gravity
         this.life -= 1;
       }
 
+      // draw(ctx: CanvasRenderingContext2D) {
+      //   ctx.beginPath();
+      //   ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+      //   ctx.fillStyle = this.color;
+      //   ctx.globalAlpha = this.life / 100;
+      //   ctx.fill();
+      // }
+
       draw(ctx: CanvasRenderingContext2D) {
+        ctx.save();
         ctx.beginPath();
-        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+        ctx.globalAlpha = Math.min(1, 0.85 * (this.life / 80));
+        // ctx.globalAlpha = this.life / 100;   // fade out smoothly
+        ctx.arc(this.x, this.y, 1.6, 0, Math.PI * 2); // smaller dots
         ctx.fillStyle = this.color;
-        ctx.globalAlpha = this.life / 100;
         ctx.fill();
+        ctx.restore();
       }
+
     }
 
     const particles: Particle[] = [];
-    const colors = ["#ff6f91", "#ffd166", "#7bdff2", "#ff9a9e", "#ffd97d"];
+    const colors = ["#ff003cff", "#ffc744ff", "#00d5ffff", "#ff9a9e", "#62ff00ff", "#ff8800ff"];
+    // const colors = ["#ff6f91", "#ffd166", "#7bdff2", "#ff9a9e", "#ffd97d"];
 
     // Create firework burst
     const createFirework = (x: number, y: number) => {
       const color = colors[Math.floor(Math.random() * colors.length)];
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 35; i++) {
         particles.push(new Particle(x, y, color));
       }
     };
 
     // Animation loop
+    // const animate = () => {
+    //   ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+    //   ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    //   particles.forEach((particle, index) => {
+    //     particle.update();
+    //     particle.draw(ctx);
+
+    //     if (particle.life <= 0) {
+    //       particles.splice(index, 1);
+    //     }
+    //   });
+
+    //   requestAnimationFrame(animate);
+    // };
+
+    // Animation loop
+    let rafId = 0;
     const animate = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+      // fade previous frame **without** adding black
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.18)"; // alpha controls trail length
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // draw new particles as light that "glows"
+      ctx.globalCompositeOperation = "lighter";
 
       particles.forEach((particle, index) => {
         particle.update();
         particle.draw(ctx);
-
-        if (particle.life <= 0) {
-          particles.splice(index, 1);
-        }
+        if (particle.life <= 0) particles.splice(index, 1);
       });
 
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     };
+
 
     // Launch fireworks at intervals
     const interval = setInterval(() => {
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height * 0.5; // Upper half of screen
       createFirework(x, y);
-    }, 500);
+    }, 700);
+
+    // after ctx is created
+    const resize = () => {
+      const rect = canvas.parentElement?.getBoundingClientRect();
+      const w = Math.floor(rect?.width ?? window.innerWidth);
+      const h = Math.floor(rect?.height ?? window.innerHeight);
+      canvas.width = w > 0 ? w : window.innerWidth;
+      canvas.height = h > 0 ? h : window.innerHeight;
+    };
+    resize();
+    const ro = new ResizeObserver(resize);
+    if (canvas.parentElement) ro.observe(canvas.parentElement);
+
 
     // Initial firework
     createFirework(canvas.width / 2, canvas.height / 3);
@@ -97,14 +144,16 @@ export const Fireworks = () => {
     // Cleanup
     return () => {
       clearInterval(interval);
+      cancelAnimationFrame(rafId);
+      ro.disconnect();
     };
   }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-50"
-      style={{ mixBlendMode: "screen" }}
-    />
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 pointer-events-none -z-10 fireworks-canvas"
+        style={{ mixBlendMode: "normal" }}
+      />
   );
 };

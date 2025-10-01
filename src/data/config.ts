@@ -9,17 +9,17 @@
 
 export const config = {
   // 💝 Her name (appears in hero section)
-  girlfriendName: "Sarah",
+  girlfriendName: "Maaike",
   
   // 🎂 Birthday date and time (when countdown reaches 0, fireworks launch!)
   // Format: "YYYY-MM-DD HH:mm:ss" (24-hour format)
-  birthdayDate: "2025-10-15 00:00:00",
+  birthdayDate: "2025-09-30T20:39:00+02:00",
   
   // 🔐 Login gate settings
   passphrase: {
     question: "Where did we first meet?",
     // Answer is case-insensitive and trimmed
-    answer: "coffee shop", // Change this to your secret answer!
+    answer: "cologne" // Change this to your secret answer!
   },
   
   // 🎨 Theme settings
