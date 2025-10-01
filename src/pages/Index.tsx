@@ -60,7 +60,7 @@ const Index = () => {
         {/* Optional: if your Hero also contains the countdown, it’s done now.
             It will just render the "special day" banner. If you prefer a 
             lighter banner without countdown, swap this with a simple Banner component. */}
-        <section id="home">
+        <section id="home"> 
           <Hero onCountdownComplete={() => {}} />
         </section>
 
