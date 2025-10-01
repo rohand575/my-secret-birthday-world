@@ -13,7 +13,7 @@ export const config = {
   
   // 🎂 Birthday date and time (when countdown reaches 0, fireworks launch!)
   // Format: "YYYY-MM-DD HH:mm:ss" (24-hour format)
-  birthdayDate: "2025-09-30T20:39:00+02:00",
+  birthdayDate: "2025-10-01T16:18:00+02:00",
   
   // 🔐 Login gate settings
   passphrase: {
