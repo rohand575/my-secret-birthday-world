@@ -1,50 +1,50 @@
 [
   {
     "id": "moment-1",
-    "date": "June 15, 2023",
-    "title": "Our First Coffee",
+    "date": "June 06, 2025",
+    "title": "Our First Meet",
     "caption": "The day everything changed",
-    "photo": "/placeholder.svg",
-    "fullStory": "I still remember walking into that coffee shop, nervous and excited. When our eyes met for the first time, I knew you were someone special. The way you smiled when you talked about your dreams, the sparkle in your eyes – I was captivated. That two-hour conversation felt like minutes, and I left knowing I wanted to spend every moment getting to know you better. ☕💕"
+    "photo": "/src/images/photo-1.jpeg",
+    "fullStory": "Me waiting eagerly for you to arrive from the Netherlands the beginning of something new. Wandering through Cologne, searching for flowers you’d love, counting down the minutes until you landed. I was nervous to ask you to be my girlfriend, even though deep down I already knew your answer.💕"
   },
   {
     "id": "moment-2",
-    "date": "July 22, 2023",
-    "title": "Stargazing Adventure",
-    "caption": "Under a blanket of stars",
-    "photo": "/placeholder.svg",
-    "fullStory": "Remember driving out to the countryside just to see the stars? We laid on that blanket, pointing out constellations we made up, laughing at our terrible astronomy knowledge. You said you felt like we were the only two people in the universe. In that moment, surrounded by infinite stars, I realized you were my universe. ✨🌙"
+    "date": "June 29, 2025",
+    "title": "Berlin Days, Endless Laughs",
+    "caption": "Our second meet — coffee, laughter, and love in every step",
+    "photo": "/src/images/photo-2.jpeg",
+    "fullStory": "Strolling through the streets of Berlin — our second time together. So much fun, laughter, and those goofy photos at Dunkin’ Donuts. We visited my church, shared quiet moments and loud smiles. Every second with you felt easy, light, and full of love.. ✨🌙"
   },
   {
     "id": "moment-3",
-    "date": "September 10, 2023",
-    "title": "The Rainy Day Dance",
-    "caption": "Dancing in the rain",
-    "photo": "/placeholder.svg",
-    "fullStory": "Our picnic got ruined by unexpected rain, but you just laughed and pulled me up to dance. No music, just the sound of raindrops and our laughter. Getting completely soaked, not caring about anything except that moment with you. That's when I learned that with you, even storms become magical memories. 🌧️💃"
+    "date": "July 12, 2025",
+    "title": "Home in Your Country",
+    "caption": "From train stations to dance stages — every moment with you felt like home",
+    "photo": "/src/images/photo-3.jpeg",
+    "fullStory": "Our third meet — this time in the Netherlands. I’ll never forget how you came to pick me up at the station, holding one of my bags while cycling with the other. Those days were filled with your warmth and care — meeting your family, going bowling, exploring every corner of the country, and watching you dance on stage. Every moment felt special, every memory golden. 🌧️💃"
   },
   {
     "id": "moment-4",
-    "date": "November 3, 2023",
-    "title": "Your Birthday Surprise",
-    "caption": "Making you smile",
-    "photo": "/placeholder.svg",
-    "fullStory": "I spent weeks planning your surprise party, trying to keep it secret while you gave me those suspicious looks. When you walked in and everyone shouted 'Surprise!', the joy on your face made every second of planning worth it. But my favorite part was later, when it was just us, and you said it was the best birthday ever. 🎉🎁"
+    "date": "August 22, 2025",
+    "title": "Closer Than Ever",
+    "caption": "Love felt easy and sure",
+    "photo": "/src/images/photo-4.jpeg",
+    "fullStory": "Our fifth meet — after that heartfelt reunion in Berlin. This time we came together with more clarity about our future. Back in the Netherlands, our days were filled with laughter and comfort — watching movies in bed, strolling through Utrecht, catching a rooftop cinema, evening walks in the woods, and cycling through Ederveen. Every moment felt peaceful and full of love. 🎉🎁"
   },
   {
     "id": "moment-5",
-    "date": "December 25, 2023",
-    "title": "First Christmas Together",
-    "caption": "Holiday magic with you",
-    "photo": "/placeholder.svg",
-    "fullStory": "Our first Christmas as a couple. We made cookies (well, you made them while I mostly ate the dough), decorated a tiny tree, and watched cheesy holiday movies. You fell asleep on my shoulder during the third movie, and I just sat there, afraid to move, wanting that peaceful moment to last forever. That's when I knew – every holiday, every moment, I want them all with you. 🎄❤️"
+    "date": "October 04, 2025",
+    "title": "The Perfect Birthday",
+    "caption": "Every gift, every detail, every moment — a celebration of love I’ll never forget.",
+    "photo": "/src/images/photo-5.jpeg",
+    "fullStory": "My birthday surprise — the best one I’ve ever had. I could feel the love and care in every detail, in every gift you chose. I truly loved each one and will cherish them for life. We had our first proper dinner date at a lovely restaurant, and it felt so special. Here’s to many more moments like that ahead. I’ll never forget how much thought you put into making me feel loved. ❤️"
   },
   {
     "id": "moment-6",
-    "date": "February 14, 2024",
-    "title": "Valentine's Day Promise",
-    "caption": "Forever starts here",
-    "photo": "/placeholder.svg",
-    "fullStory": "On this Valentine's Day, I didn't just say 'I love you' – I promised to love you through every season, every challenge, every joy. You held my hand and said you felt the same way. In that candlelit restaurant, surrounded by roses and soft music, we both knew this was just the beginning of our forever. 💍💝"
+    "date": "October 21, 2025",
+    "title": "Ten Days of Us",
+    "caption": "Laughter, late-night shows, homemade food, and love — the kind of days I want for a lifetime.",
+    "photo": "/src/images/photo-6.jpeg",
+    "fullStory": "We spent almost ten days together before I left for India — the best days of the year. From binge-watching Ghosts on Netflix to cooking delicious meals and trying new recipes, every moment was effortless fun. Our little clay date, the pizza dinner in Utrecht — all of it felt like a glimpse of the life I want with you. I can’t wait to spend forever living, laughing, and loving like this.💝"
   }
 ]

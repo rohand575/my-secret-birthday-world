@@ -76,9 +76,9 @@ export const LoginGate = ({ onUnlock }: LoginGateProps) => {
           </Button>
         </form>
 
-        <p className="text-xs text-center text-muted-foreground mt-6">
+        {/* <p className="text-xs text-center text-muted-foreground mt-6">
           Hint: Think about our special moments together 💭
-        </p>
+        </p> */}
       </div>
 
       <style>{`

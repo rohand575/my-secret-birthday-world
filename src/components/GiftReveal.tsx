@@ -18,9 +18,9 @@ export const GiftReveal = () => {
   const [isRevealed, setIsRevealed] = useState(false);
 
   // 🎁 CUSTOMIZE THIS: Your gift message and hint
-  const giftMessage = "I've prepared something special for you...";
-  const giftHint = "Check under your pillow tonight! 🎁";
-  const totalTiles = 9;
+  const giftMessage = "";
+  const giftHint = "Check in the left bottom drawer of your bed! 🎁";
+  const totalTiles = 6;
 
   const handleTileClick = (index: number) => {
     if (revealProgress >= totalTiles) return;

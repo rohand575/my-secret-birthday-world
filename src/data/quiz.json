@@ -4,23 +4,23 @@
     "question": "What was the first movie we watched together?",
     "options": [
       "The Notebook",
-      "La La Land",
+      "Me Before You",
       "Your favorite rom-com",
       "That action movie"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "emoji": "🎬"
   },
   {
     "id": "q2",
-    "question": "What's my go-to coffee order?",
+    "question": "What's my go-to drink order?",
     "options": [
-      "Black coffee",
+      "Hot Chocolate",
       "Caramel latte with extra foam",
       "Cappuccino",
       "Iced americano"
     ],
-    "correctAnswer": 1,
+    "correctAnswer": 0,
     "emoji": "☕"
   },
   {
@@ -28,11 +28,11 @@
     "question": "What song do I always sing in the shower?",
     "options": [
       "Perfect by Ed Sheeran",
-      "That 80s song",
+      "Khayaal by Talwiinder",
       "Our song",
       "Some random tune"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 1,
     "emoji": "🎵"
   },
   {
