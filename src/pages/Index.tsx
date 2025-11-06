@@ -5,7 +5,7 @@ import { Timeline } from "@/components/Timeline";
 import { Gallery } from "@/components/Gallery";
 import { Quiz } from "@/components/Quiz";
 import { GiftReveal } from "@/components/GiftReveal";
-import { CardWall } from "@/components/CardWall";
+// import { CardWall } from "@/components/CardWall";
 import { Navigation } from "@/components/Navigation";
 // import { Countdown } from "@/components/Countdown"; // not needed directly here
 
@@ -73,7 +73,7 @@ const Index = () => {
           <GiftReveal />
         )}
 
-        <CardWall />
+        {/* <CardWall /> */}
       </main>
     </div>
   );

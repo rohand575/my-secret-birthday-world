@@ -16,7 +16,7 @@ export const Navigation = () => {
     { label: "Timeline", href: "#timeline" },
     { label: "Gallery", href: "#gallery" },
     { label: "Quiz", href: "#quiz" },
-    { label: "Notes", href: "#notes" },
+    // { label: "Notes", href: "#notes" },
   ];
 
   const scrollToSection = (href: string) => {

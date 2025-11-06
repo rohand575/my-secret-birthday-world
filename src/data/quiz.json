@@ -49,23 +49,23 @@
   },
   {
     "id": "q5",
-    "question": "What's our favorite place to visit together?",
+    "question": "What's my favourite car?",
     "options": [
-      "The beach at sunset",
-      "That cozy bookstore",
-      "The park where we had our first date",
-      "Your favorite restaurant"
+      "Lamborghini",
+      "Ferrari",
+      "Ford Mustang",
+      "Tesla"
     ],
     "correctAnswer": 2,
     "emoji": "📍"
   },
   {
     "id": "q6",
-    "question": "What did I get you for our first anniversary?",
+    "question": "What did I get you for our first meet?",
     "options": [
-      "Jewelry",
-      "A handwritten book of our memories",
-      "Flowers",
+      "Clay thingy",
+      "A handwritten letter and Flowers",
+      "Toy bicycle",
       "Concert tickets"
     ],
     "correctAnswer": 1,
@@ -88,11 +88,11 @@
     "question": "What's my nickname for you?",
     "options": [
       "My love",
-      "Sunshine",
-      "That special name only I use",
-      "Beautiful"
+      "Princess",
+      "Beautiful",
+      "All of the above"
     ],
-    "correctAnswer": 2,
+    "correctAnswer": 3,
     "emoji": "😊"
   }
 ]
