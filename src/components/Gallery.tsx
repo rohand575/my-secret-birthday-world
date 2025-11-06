@@ -19,42 +19,42 @@ import { Play, Pause } from "lucide-react";
 const photos = [
   {
     id: 1,
-    src: "/src/images/photo-7.jpeg",
+    src: "/photos/photo-7.jpeg",
     alt: "",
     audio: null, // Add path like "/audio/note1.mp3" if you have audio
     caption: "",
   },
   {
     id: 2,
-    src: "/src/images/photo-8.jpeg",
+    src: "/photos/photo-8.jpeg",
     alt: "",
     audio: null,
     caption: "",
   },
   {
     id: 3,
-    src: "/src/images/photo-9.jpeg",
+    src: "/photos/photo-9.jpeg",
     alt: "",
     audio: null,
     caption: "",
   },
   {
     id: 4,
-    src: "/src/images/photo-10.jpeg",
+    src: "/photos/photo-10.jpeg",
     alt: "",
     audio: null,
     caption: "",
   },
   {
     id: 5,
-    src: "/src/images/photo-11.jpeg",
+    src: "/photos/photo-11.jpeg",
     alt: "",
     audio: null,
     caption: "",
   },
   {
     id: 6,
-    src: "/src/images/photo-12.jpeg",
+    src: "/photos/photo-12.jpeg",
     alt: "",
     audio: null,
     caption: "",
